@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1 class="text-center mt-5">All Blogs</h1>
+    <p class="text-center mt-2 text-danger"> Hmm, there are letting YOU to input ANYTHING you want through the textarea tag</p>
+    <p class="text-center mt-2 text-danger">I wonder what will you enter...</p>
+    
     <form id="blogForm" action="#" method="post" class="d-flex flex-column">
         <h3>Enter your blog</h3>
         <textarea class="form-control mb-3 w-75" id="blog"></textarea>
@@ -23,10 +26,8 @@
             const newBlog = document.getElementById('blog').value;
             const newDiv = document.createElement('div');
             newDiv.classList.add('mt-4');
-            newDiv.innerHTML = newBlog;
-            console.log(newDiv);
+            newDiv.innerHTML = newBlog;  // This line may cause big TROUBLE
             document.getElementById('output').appendChild(newDiv);
-            console.log(document.getElementById('output'))
         };
     </script>
    
